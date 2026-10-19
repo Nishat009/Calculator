@@ -1,7 +1,15 @@
 @import "tailwindcss";
-#root {
-    max-width: 100% !important;
-    margin: 0 auto;
-    padding: 0rem !important;
-    text-align: center;
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f3f2ee;
+  background: #0d1115;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button { font: inherit; }
+button:focus-visible, a:focus-visible { outline: 2px solid #b9ef78; outline-offset: 3px; }
+::selection { color: #142014; background: #b9ef78; }

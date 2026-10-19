@@ -1,12 +1,14 @@
-function Button({ label, onClick, style }) {
+function Button({ label, onClick, tone }) {
   return (
     <button
+      type="button"
       onClick={onClick}
-      className={`p-4 text-white rounded-lg ${style} transition-colors`}
+      className={`calculator-button ${tone}`}
+      aria-label={label}
     >
       {label}
     </button>
-  );
+  )
 }
 
-export default Button;
+export default Button

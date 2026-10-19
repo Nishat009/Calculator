@@ -1,10 +1,13 @@
 function Display({ expression, result }) {
   return (
-    <div className="bg-gray-800 text-white text-right p-4 rounded-lg mb-4">
-      <div className="text-lg text-gray-400 mb-2">{expression || '0'}</div>
-      <div className="text-2xl font-mono">{result}</div>
+    <div className="calculator-display" aria-live="polite">
+      <div className="expression-line">{expression || 'Ready for your next calculation'}</div>
+      <div className={`result-line ${result === 'Error' ? 'error' : ''}`}>
+        <span className="result-equals">=</span>
+        <span>{result || '...'}</span>
+      </div>
     </div>
-  );
+  )
 }
 
-export default Display;
+export default Display

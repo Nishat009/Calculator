@@ -3,17 +3,23 @@ import './App.css'
 import Calculator from './Components/Calculator'
 
 function App() {
-
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-violet-900 to-fuchsia-900 flex flex-col items-center justify-center p-4">
-        <h1 className='text-6xl font-bold bg-gradient-to-r from-cyan-300 via-violet-300 to-fuchsia-300 bg-clip-text text-transparent mb-4'>Scientific Calculator</h1>
-      <p className="text-white/90 text-xl font-medium mb-3">
-            Advanced • Vibrant • Powerful
-          </p>
-      <Calculator />
+    <div className="app-shell">
+      <div className="app-container">
+        <header className="page-header">
+          <a className="brand-mark" href="/" aria-label="Orbit calculator home"><span>o</span></a>
+          <div className="brand-copy"><strong>orbit</strong><span>CALCULATOR</span></div>
+          <div className="header-tag"><span className="status-pulse" /> SCIENTIFIC MODE</div>
+        </header>
+        <section className="intro">
+          <span className="eyebrow">A LITTLE MORE POWER, BUILT RIGHT IN</span>
+          <h1>Think beyond <span>numbers.</span></h1>
+          <p>Everything you need to work through the big ideas.</p>
+        </section>
+        <Calculator />
+        <footer className="page-footer"><span>MADE FOR CURIOUS MINDS</span><span>ORBIT <i>·</i> 2026</span></footer>
+      </div>
     </div>
-    </>
   )
 }
 
